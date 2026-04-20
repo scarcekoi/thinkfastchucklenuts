@@ -1,6 +1,7 @@
 plugins {
 	id 'net.fabricmc.fabric-loom' version "${loom_version}"
 	id 'maven-publish'
+	id "com.modrinth.minotaur" version "2.+"
 }
 
 version = project.mod_version
@@ -81,5 +82,20 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
+	}
+}
+
+modrinth {
+	token = System.getenv("MODRINTH_TOKEN")
+	projectId = "thinkfastchucklenuts"
+	versionNumber = project.version
+	versionType = "release"
+	uploadFile = jar
+	gameVersions = ["26.1.2"]
+	loaders = ["fabric"]
+	syncBodyFrom = rootProject.file("README.md").text
+	dependencies {
+		required.project "fabric-api"
+		optional.version "modmenu", "18.0.0-alpha.8"
 	}
 }
