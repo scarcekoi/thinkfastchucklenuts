@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "thinkfastchucklenuts",
+	"version": "${version}",
+	"name": "Think Fast Chucklenuts",
+	"description": "You'll see...",
+	"authors": [
+		"Scarce Koi"
+	],
+	"contact": {
+		"homepage": "https://github.com/scarcekoi",
+		"issues": "https://github.com/scarcekoi/thinkfastchucklenuts/issues",
+		"sources": "https://github.com/scarcekoi/thinkfastchucklenuts"
+	},
+	"license": "MIT",
+	"icon": "assets/thinkfastchucklenuts/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.scarcekoi.thinkfastchucklenuts.ThinkFastChucklenuts"
+		],
+		"client": [
+			"dev.scarcekoi.thinkfastchucklenuts.client.ThinkFastChucklenutsClient"
+		]
+	},
+	"mixins": [
+		"thinkfastchucklenuts.mixins.json",
+		{
+			"config": "thinkfastchucklenuts.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
