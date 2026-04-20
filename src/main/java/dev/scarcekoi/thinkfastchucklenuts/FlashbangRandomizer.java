@@ -32,7 +32,7 @@ public class FlashbangRandomizer {
             return;
         }
 
-        if (RANDOM.nextFloat() < 0.05f) {
+        if (RANDOM.nextFloat() < 0.1f) {
             ServerPlayer target = players.get(RANDOM.nextInt(players.size()));
             ThinkFastChucklenutsNetworking.flashPlayer(target);
         }
@@ -41,6 +41,6 @@ public class FlashbangRandomizer {
     }
 
     private static void resetTimer() {
-        ticksUntilNext = 900 + RANDOM.nextInt(900);
+        ticksUntilNext = 600 + RANDOM.nextInt(900);
     }
 }
