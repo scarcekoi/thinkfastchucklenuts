@@ -35,5 +35,16 @@
 		"minecraft": "~26.1.2",
 		"java": ">=25",
 		"fabric-api": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.bluesky": "https://bsky.app/profile/scarcekoi.bsky.social",
+				"modmenu.mastodon": "https://fosstodon.org/@scarcekoi",
+				"modmenu.modrinth": "https://modrinth.com/user/scarcekoi",
+				"modmenu.twitch": "https://www.twitch.tv/scarcekoi",
+				"modmenu.youtube": "https://www.youtube.com/@scarcekoi"
+			}
+		}
 	}
 }
