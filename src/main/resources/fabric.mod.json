@@ -36,6 +36,9 @@
 		"java": ">=25",
 		"fabric-api": "*"
 	},
+	"optional": {
+		"modmenu": ">=18.0.0-alpha.8"
+	},
 	"custom": {
 		"modmenu": {
 			"links": {
